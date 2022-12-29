@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ParkerAirLines.com/Resercation"
+	xmlns:pal="http://www.ParkerAirLines.com/Resercation"
+	elementFormDefault="qualified">
+	<include schemaLocation="flight.xsd"></include>
+	<include schemaLocation="common.xsd"></include>
+	<element name="reservation">
+		<complexType>
+			<sequence>
+				<element name="flight" type="pal:flight" />
+				<element name="passenger" type="pal:passenger" />
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="passenger">
+		<sequence>
+			<element name="lastName" type="pal:stringMax20" />
+			<element name="firstName" type="pal:stringMax20" />
+			<element name="middleName" type="pal:stringMax20" />
+			<element name="email" type="pal:emailValid" />
+			<element name="phoneNumber" type="pal:phone" />
+		</sequence>
+	</complexType>
+
+
+
+	<simpleType name="phone">
+		<restriction base="string">
+			<pattern value="[89][0-9]{9}"></pattern>
+		</restriction>
+	</simpleType>
+
+
+
+	<simpleType name="emailValid">
+		<restriction base="string">
+			<pattern value="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"></pattern>
+		</restriction>
+	</simpleType>
+
+</schema>

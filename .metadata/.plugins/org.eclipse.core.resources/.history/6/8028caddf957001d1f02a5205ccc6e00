@@ -1,0 +1,19 @@
+package one;
+
+public class First {
+	int a;
+
+	public First(int b) {
+		a=b;
+	}
+	First(){
+		
+	}
+
+	public static void main(String[] args) {
+		First first = new First();
+		first.a = 2;
+		System.out.println(first.a);
+	}
+
+}

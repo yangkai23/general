@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Order xmlns:tns="http://www.example.org/NewXMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/NewXMLSchema Order.xsd ">
+	<tns:Product>
+		<tns:name>Anirudh</tns:name>
+		<tns:description>Exmaple  ndjvndjsknvdn jkdnvdjvjdn  dubvdj dhc eugugdvjhcdcb ugedvhbdhvsh</tns:description>
+		<tns:price>0</tns:price>
+		<tns:category>shoes</tns:category>
+	</tns:Product>
+</tns:Order>

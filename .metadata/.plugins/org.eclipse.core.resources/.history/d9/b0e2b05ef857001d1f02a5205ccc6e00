@@ -1,0 +1,8 @@
+package one;
+
+public class First {
+	static String a;
+	public static void main(String[] args) {
+		System.out.println(a);
+	}
+}

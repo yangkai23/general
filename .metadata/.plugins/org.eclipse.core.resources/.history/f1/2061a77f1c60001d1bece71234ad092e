@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Patient
+	xmlns:tns="http://www.parkerlogistics.com/Patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.parkerlogistics.com/Patient Patient.xsd ">
+	<tns:name>Anirudh</tns:name>
+	<tns:age>23</tns:age>
+	<tns:gender>M</tns:gender>
+	<tns:phone>00000000</tns:phone>
+	<tns:PaymentType>
+		<tns:cash>8000</tns:cash>
+	</tns:PaymentType>
+</tns:Patient>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ParkerIncEvents.com/Event"
+	xmlns:tns="http://www.ParkerIncEvents.com/Event"
+	xmlns:common="http://www.ParkerIncEvents.com/common"
+	elementFormDefault="qualified">
+	<import schemaLocation="common.xsd"
+		namespace="http://www.ParkerIncEvents.com/common" />
+	<complexType name="Participant">
+		<sequence>
+			<element name="name" type="common:stringmax25" />
+			<element name="email" type="common:emailValid" />
+			<element name="phone" type="common:phoneValid" />
+		</sequence>
+		<attribute name="id" type="common:ID" use="required" />
+	</complexType>
+</schema>

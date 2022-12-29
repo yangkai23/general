@@ -1,0 +1,17 @@
+package grind.medium;
+
+import java.util.Scanner;
+
+public class LongestSubstring {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		String len = getLongSubstrLength(s);
+		System.out.println(len);
+		sc.close();
+	}
+
+	private static String getLongSubstrLength(String s) {
+		return null;
+	}
+}

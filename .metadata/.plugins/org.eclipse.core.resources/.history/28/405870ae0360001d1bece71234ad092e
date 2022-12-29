@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/NewXMLSchema"
+	xmlns:tns="http://www.example.org/NewXMLSchema"
+	elementFormDefault="qualified">
+	<element name="Order" />
+	<complexType name="Order">
+		<sequence>
+			<element name="Product" type="string"></element>
+		</sequence>
+	</complexType>
+	<complexType name="Product">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="description" type="string"></element>
+			<element name="price" type="string"></element>
+			<element name="category" type="string"></element>
+		</sequence>
+	</complexType>
+	<simpleType name="name20chars">
+		<restriction base="string">
+			<maxLength value="20"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="desc100chars">
+		<restriction base="string">
+			<maxLength value="100"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="categoryEnum">
+		<restriction base="string">
+		<enumeration value="shoes"/>
+		<enumeration value="electronics"/>
+		<enumeration value="groceries"/>
+		</restriction>
+	</simpleType>
+</schema>

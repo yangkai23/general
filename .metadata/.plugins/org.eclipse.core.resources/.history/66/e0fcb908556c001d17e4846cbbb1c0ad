@@ -1,0 +1,15 @@
+package linkedlist;
+
+public class SinglyLinkedList {
+	private Node head;
+	private int size;
+
+	private class Node {
+		public int data;
+		public Node next;
+	}
+
+	public int size() {
+		return size;
+	}
+}

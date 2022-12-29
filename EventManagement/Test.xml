@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Event id="idvalue0"
+	xmlns:tns="http://www.ParkerIncEvents.com/Event"
+	xmlns:tns1="http://www.ParkerIncEvents.com/common"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ParkerIncEvents.com/Event.xsd ">
+	<name>name</name>
+	<description>description</description>
+	<ticketPrice>0.0</ticketPrice>
+	<startTime>2001-12-31T12:00:00</startTime>
+	<endTime>2001-12-31T12:00:00</endTime>S
+	<Organiser id="idvalue1">
+		<name>tns:name</name>
+		<tns:email>tns:email</tns:email>
+		<tns:phone>tns:phone</tns:phone>
+	</Organiser>
+	<Venue id="idvalue2">
+		<tns:name>tns:name</tns:name>
+		<tns:street>tns:street</tns:street>
+		<tns:city>tns:city</tns:city>
+		<tns:state>tns:state</tns:state>
+		<tns:country>tns:country</tns:country>
+		<tns:zipcode>tns:zipcode</tns:zipcode>
+	</Venue>
+	<Participant id="idvalue3">
+		<tns:name>tns:name</tns:name>
+		<tns:email>tns:email</tns:email>
+		<tns:phone>tns:phone</tns:phone>
+	</Participant>
+	<Participant id="idvalue4">
+		<tns:name>tns:name</tns:name>
+		<tns:email>tns:email</tns:email>
+		<tns:phone>tns:phone</tns:phone>
+	</Participant>
+	<Participant id="idvalue5">
+		<tns:name>tns:name</tns:name>
+		<tns:email>tns:email</tns:email>
+		<tns:phone>tns:phone</tns:phone>
+	</Participant>
+</tns:Event>

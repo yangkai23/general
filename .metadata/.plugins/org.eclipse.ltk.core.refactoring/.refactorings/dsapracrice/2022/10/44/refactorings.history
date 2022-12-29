@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change method &apos;private static void sorting.MergeSort.merge(int[] ar, int start, int mid, int end)&apos; to &apos;public static void merge(int[] ar, int start, int mid, int end)&apos;&#x0D;&#x0A;- Original project: &apos;dsapracrice&apos;&#x0D;&#x0A;- Original element: &apos;sorting.MergeSort.merge(...)&apos;&#x0D;&#x0A;- New visibility: &apos;public&apos;" delegate="false" deprecate="true" description="Change method &apos;merge&apos;" flags="589826" id="org.eclipse.jdt.ui.change.method.signature" input="/src&lt;sorting{MergeSort.java[MergeSort~merge~\[I~I~I~I" name="merge" parameter1="int[] ar 0 int[] ar false" parameter2="int start 1 int start false" parameter3="int mid 2 int mid false" parameter4="int end 3 int end false" stamp="1666714585548" version="1.0" visibility="1"/>
+</session>

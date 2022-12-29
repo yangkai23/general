@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:passenger
+	xmlns:tns="http://www.example.org/NewXMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/NewXMLSchema Passenger.xsd ">
+	<tns:name>Anirudh</tns:name>
+	<tns:dob>1999-11-23</tns:dob>
+	<tns:seatNo>31</tns:seatNo>
+	<tns:gender>Male</tns:gender>
+</tns:passenger>

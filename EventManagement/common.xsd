@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ParkerIncEvents.com/common"
+	xmlns:tns="http://www.ParkerIncEvents.com/common"
+	elementFormDefault="qualified">
+
+	<simpleType name="stringmax25">
+		<restriction base="string">
+			<maxLength value="25" />
+		</restriction>
+	</simpleType>
+	<simpleType name="stringmax200">
+		<restriction base="string">
+			<maxLength value="200" />
+		</restriction>
+	</simpleType>
+	<simpleType name="emailValid">
+		<restriction base="string">
+			<pattern value="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}"></pattern>
+		</restriction>
+	</simpleType>
+	<simpleType name="phoneValid">
+		<restriction base="string">
+			<pattern value="[7689][0-9]{9}"></pattern>
+		</restriction>
+	</simpleType>
+	<simpleType name="ID">
+		<restriction base="string">
+			<pattern value="[0-9]{6}"></pattern>
+		</restriction>
+	</simpleType>
+</schema>

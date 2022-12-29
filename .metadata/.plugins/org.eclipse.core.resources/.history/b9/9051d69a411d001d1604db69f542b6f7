@@ -1,0 +1,74 @@
+package employee_details_proj.dto;
+
+public class Employee implements Comparable<Employee> {
+	private String firstName;
+	private String lastName;
+	private String dob;
+	private String doj;
+	private int experience;
+	private String designation;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getDoj() {
+		return doj;
+	}
+
+	public void setDoj(String doj) {
+		this.doj = doj;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	@Override
+	public int compareTo(Employee e) {
+		String dob[]=e.getDob().split("-");
+		String edob[]=this.getDob().split("-");
+		int  day=Integer.parseInt(dob[0]);String eday=edob[0];
+		String mon=dob[1];	String emon=edob[1];
+		String year=dob[2];String eyear=edob[2];
+		if(year>eyear)
+			return -1;
+		else {
+			
+		}
+		return 0;
+	}
+
+}

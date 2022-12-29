@@ -1,0 +1,16 @@
+package one;
+
+public class Test {
+	
+	public static void demo(int x,int y) {
+		if(y==0) {
+			System.err.println("Cannot perform Arithmetic operation");
+			return;
+		}
+		System.out.println(x/y);
+	}
+	
+	public static void main(String[] args) {
+			demo(4, 0);
+	}
+}

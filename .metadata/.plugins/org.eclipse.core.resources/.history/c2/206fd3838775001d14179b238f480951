@@ -1,0 +1,23 @@
+package constructor_chaining;
+
+public class Student {
+	int marks;
+	int mobileNumber;
+	int emailId;
+	long aadhar;
+
+	public Student() {
+
+	}
+
+//type
+	// num of
+	// sequence
+	Student(int marks, int mobile) {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

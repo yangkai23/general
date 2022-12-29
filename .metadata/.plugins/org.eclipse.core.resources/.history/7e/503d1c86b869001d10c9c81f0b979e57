@@ -1,0 +1,3 @@
+<!-- PCDATA - Parsed Character Data -->
+<!ELEMENT email (to)>
+<!ELEMENT to (#PCDATA)>

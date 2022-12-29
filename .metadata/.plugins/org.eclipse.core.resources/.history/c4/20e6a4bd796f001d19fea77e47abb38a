@@ -1,0 +1,66 @@
+package linkedlist;
+
+public class DoublyLinkedList {
+	private Node head;
+	private Node tail;
+	private int size;
+
+	public DoublyLinkedList() {
+		this.head = null;
+		this.tail = null;
+		this.size = 0;// by default it's 0 , no need to initialize explicitly
+	}
+
+	private class Node {
+		private int data;
+		private Node next;
+		private Node previous;
+
+		public Node(int data) {
+			this.data = data;
+			this.next = null;
+			this.previous = null;
+		}
+	}
+
+	public void addFirst(int data) {
+		Node node = new Node(data);
+		if (head == null && size == 0) {
+			head = tail = node;
+			size++;
+			return;
+		}
+		node.next = this.head;
+		this.head.previous = node;
+		this.head = node;
+		size++;
+	}
+
+	public int size() {
+		return this.size;
+	}
+
+	public boolean isEmpty() {
+		return this.size == 0;
+	}
+
+	public void printList() {
+		Node temp = this.head;
+		System.out.println("Head->");
+		while (temp != null) {
+			System.out.println(temp.data + " <=>");
+			temp = temp.next;
+		}
+		System.out.println("<-Tail <=> null");
+	}
+
+	public void printReverse() {
+		Node temp = this.tail;
+		System.out.println("Tail->");
+		while (temp != null) {
+			System.out.println(temp.data + " <=>");
+			temp = temp.previous;
+		}
+		System.out.println("<-Head <=> null");
+	}
+}

@@ -1,0 +1,11 @@
+package one;
+
+public class TernaryOperator {
+	// Blocks
+	{
+		System.out.println("I'm non static block");
+	}
+
+	public static void main(String[] args) {
+	}
+}

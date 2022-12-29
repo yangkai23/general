@@ -1,0 +1,18 @@
+package employee_details_proj.test;
+
+import employee_details_proj.dto.Employee;
+import employee_details_proj.service.EmployeeService;
+
+public class Test {
+public static void main(String[] args) {
+	Employee employee=new Employee();
+	employee.setFirstName("Anirudh");
+	employee.setLastName("Talluri");
+	employee.setDob("23-11-1999");
+	employee.setDoj("09-05-2022");
+	employee.setExperience(1);
+	employee.setDesignation("trainee");
+	EmployeeService service=new EmployeeService();
+	service.groupEmployees(employee);
+}
+}

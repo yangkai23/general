@@ -1,0 +1,28 @@
+package miscallaneous;
+
+import java.util.Scanner;
+
+public interface Permutations {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		printPermutations(sc.next(), 0);
+		sc.close();
+	}
+
+	public static void printPermutations(String word, int pos) {
+		if (pos == word.length())
+			return;
+		for (int i = pos; i < word.length(); i++) {
+			if (pos == 0) {
+				System.out.println(word.charAt(i) + word.substring(pos + 1, i - 1) + word.charAt(pos)
+						+ word.substring(i + 1, word.length() - 1));
+			} else if (pos == word.length() - 1) {
+				System.out.println(word.substring(0, pos - 1) + word.charAt(i) + word.substring(pos + 1, i - 1)
+						+ word.charAt(pos));
+			}
+			System.out.println(word.substring(0, pos - 1) + word.charAt(i) + word.substring(pos + 1, i - 1)
+					+ word.charAt(pos) + word.substring(i + 1, word.length() - 1));
+		}
+		printPermutations(word, pos = pos + 1);
+	}
+}

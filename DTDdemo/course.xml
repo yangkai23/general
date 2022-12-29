@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE course SYSTEM "course.dtd" >
+<course>
+	<title>Demo</title>
+	<name>Java</name>
+	<price>30000</price>
+	<rating>4.1</rating>
+</course>

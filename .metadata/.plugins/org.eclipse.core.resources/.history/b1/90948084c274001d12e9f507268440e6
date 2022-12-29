@@ -1,0 +1,18 @@
+package one;
+
+import java.util.Scanner;
+
+public class Loops {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String month = scanner.next();
+		switch(month) {
+		case "jan":
+			System.out.println("jan has 31 days");
+		case "feb":
+			System.out.println("");
+		}
+
+		scanner.close();
+	}
+}

@@ -1,0 +1,27 @@
+package one;
+
+public class StaticBlocks {
+	static {
+		{
+			System.out.println("inner block");
+		}
+		System.out.println("this is static block");
+
+	}
+
+	{
+		System.out.println("instance block 1");
+	}
+
+	public static void main(String[] args) {
+		StaticBlocks blocks = new StaticBlocks();
+		StaticBlocks blocks2 = new StaticBlocks();
+	}
+
+	static {
+		System.out.println("static block2 ");
+	}
+	{
+		System.out.println("instance block 2");
+	}
+}

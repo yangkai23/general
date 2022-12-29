@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;pos&apos; in &apos;miscallaneous.Permutations.printPermutations(...)&apos; to &apos;left&apos;&#x0D;&#x0A;- Original project: &apos;DCE&apos;&#x0D;&#x0A;- Original element: &apos;miscallaneous.Permutations.printPermutations(String, int).pos&apos;&#x0D;&#x0A;- Renamed element: &apos;pos&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pos&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;miscallaneous{Permutations.java[Permutations~printPermutations~QString;~I@pos!316!322!320!322!I!0!true" name="left" references="true" stamp="1671095301214" version="1.0"/>
+</session>

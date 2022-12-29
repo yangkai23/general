@@ -1,0 +1,15 @@
+package one;
+
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+
+	static {
+		Scanner sc = new Scanner(System.in);
+		sc.close();
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

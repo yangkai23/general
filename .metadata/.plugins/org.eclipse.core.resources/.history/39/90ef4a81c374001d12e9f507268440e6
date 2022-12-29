@@ -1,0 +1,24 @@
+package one;
+
+import java.util.Scanner;
+
+public class Loops {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String month = scanner.next();
+		switch (month) {
+		case "jan":
+			System.out.println("jan has 31 days");
+			break;
+		case "feb":
+			System.out.println("feb has 28 days");
+			break;
+		case "mar":
+			System.out.println(" march has 31 days");
+			break;
+		default:
+			System.out.println("not a valid month");
+		}
+		scanner.close();
+	}
+}

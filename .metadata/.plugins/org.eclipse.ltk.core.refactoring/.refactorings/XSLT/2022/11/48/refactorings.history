@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;XSLT/Order.out.xml&apos; to &apos;Order.html&apos;" description="Rename resource &apos;Order.out.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Order.out.xml" name="Order.html" stamp="1669047042471" updateReferences="true"/>
+</session>

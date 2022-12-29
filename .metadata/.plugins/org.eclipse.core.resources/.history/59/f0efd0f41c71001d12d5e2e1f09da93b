@@ -1,0 +1,13 @@
+package linkedlist;
+
+public class DoublyLinkedListMain {
+	public static void main(String[] args) {
+		DoublyLinkedList list = new DoublyLinkedList();
+		list.addFirst(0);
+		list.addFirst(2);
+		list.addFirst(6);
+		list.addFirst(1);
+		list.printList();
+		list.printReverse();
+	}
+}

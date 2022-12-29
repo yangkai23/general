@@ -1,0 +1,23 @@
+package one;
+
+import java.util.Scanner;
+
+public class EvenOddInRange {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter lower bound");
+		int lowerBound = scanner.nextInt();
+		System.out.println("Enter Upper bound");
+		int upperBound = scanner.nextInt();
+		int evenSum = 0, oddSum = 0;
+		do {
+			if (lowerBound % 2 == 0)
+				evenSum += lowerBound;
+			else
+				oddSum += lowerBound;
+		} while (++lowerBound <= upperBound);
+		System.out.println("Even numbers sum = " + evenSum);
+		System.out.println("Odd numbers sum = " + oddSum);
+		scanner.close();
+	}
+}

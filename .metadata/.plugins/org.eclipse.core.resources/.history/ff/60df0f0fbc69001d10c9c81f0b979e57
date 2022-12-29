@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE course SYSTEM "student.dtd" >
+<student year=2021>
+  <name>Anirudh</name>
+  <score>92</score>
+</student>

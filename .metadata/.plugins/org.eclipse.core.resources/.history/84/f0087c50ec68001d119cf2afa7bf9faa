@@ -1,0 +1,54 @@
+package com.parkerInc.xmlparsers.sax.parser;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.parkerInc.xmlparsers.sax.dto.DriversLicense;
+
+public class SaxHandler extends DefaultHandler {
+	private DriversLicense driversLicense;
+	private String content;
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		if (qName.equals("driversLicense"))
+			driversLicense = new DriversLicense();
+
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		switch (qName) {
+		case "Number":
+			driversLicense.setNumber(Integer.parseInt(content));
+			break;
+		case "firstName":
+			driversLicense.setFirstname(qName);
+			break;
+		case "lastName":
+			driversLicense.setLastName(qName);
+			break;
+		case "dateOfBirth":
+			driversLicense.setDateOfBirth(qName);
+			break;
+		case "vehicleType":
+			driversLicense.setVehicleType(qName);
+			break;
+		case "dateOfIssue":
+			driversLicense.setDateOfissue(qName);
+			break;
+		case "expiryDate":
+			driversLicense.setExpiryDate(qName);
+			break;
+		case "location":
+			driversLicense.setImageLocation(qName);
+			break;
+		}
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		content = String.valueOf(ch, start, length).trim();
+	}
+}

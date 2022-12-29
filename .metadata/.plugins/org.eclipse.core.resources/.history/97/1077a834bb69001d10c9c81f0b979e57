@@ -1,0 +1,5 @@
+<!-- PCDATA - Parsed Character Data -->
+<!--<!ELEMENT email (to+,subject*,body?)>-->
+<!ELEMENT student (name,score)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT score (#PCDATA)>

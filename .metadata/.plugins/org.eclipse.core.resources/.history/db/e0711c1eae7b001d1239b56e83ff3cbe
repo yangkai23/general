@@ -1,0 +1,5 @@
+package miscallaneous;
+
+public interface Permutations {
+
+}

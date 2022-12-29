@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ParkerIncEvents.com/Event"
+	xmlns:tns="http://www.ParkerIncEvents.com/Event"
+	xmlns:common="http://www.ParkerIncEvents.com/common"
+	elementFormDefault="qualified">
+	<include schemaLocation="Organiser.xsd" />
+	<include schemaLocation="Participant.xsd" />
+	<include schemaLocation="Venue.xsd" />
+	<import schemaLocation="common.xsd"
+		namespace="http://www.ParkerIncEvents.com/common" />
+	<element name="Event">
+		<complexType>
+			<sequence>
+				<element name="name" type="common:stringmax25" />
+				<element name="description" type="common:stringmax200" />
+				<element name="ticketPrice" type="decimal" />
+				<element name="startTime" type="dateTime" />
+				<element name="endTime" type="dateTime" />
+				<element name="Organiser" type="tns:Organiser" />
+				<element name="Venue" type="tns:Venue" />
+				<element name="Participant" type="tns:Participant"
+					minOccurs="3" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="id" type="common:ID" use="required" />
+		</complexType>
+	</element>
+</schema>

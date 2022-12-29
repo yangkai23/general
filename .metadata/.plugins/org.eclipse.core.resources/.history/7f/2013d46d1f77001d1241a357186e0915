@@ -1,0 +1,9 @@
+package one;
+
+public class TernaryOperator {
+	public static void main(String[] args) {
+		int x = 2;
+		String res = x % 2 == 0 ? "Even" : "odd";
+		System.out.println(res);
+	}
+}

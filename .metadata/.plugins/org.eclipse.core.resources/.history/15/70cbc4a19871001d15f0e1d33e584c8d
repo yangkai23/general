@@ -1,0 +1,13 @@
+package one;
+
+public class Rev0112 {
+	
+	int x;//initialization @ declaration
+
+	public static void main(String[] args) {
+			Rev0112 rev0112a=new Rev0112();
+			Rev0112 rev0112b=new Rev0112();
+			System.out.println(rev0112a.x);
+			System.out.println(rev0112b.x);
+	}
+}

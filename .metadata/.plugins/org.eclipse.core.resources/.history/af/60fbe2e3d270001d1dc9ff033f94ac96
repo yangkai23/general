@@ -1,0 +1,16 @@
+package one;
+
+public class Variable {
+	int x;
+
+	public void test() {
+		int y;
+		System.out.println(y);
+//		System.out.println(x);
+	}
+
+	public static void main(String[] args) {
+		Variable variable = new Variable();
+		variable.test();
+	}
+}

@@ -1,0 +1,92 @@
+package conceptual;
+
+public class Student {
+	static int arraySize;
+	static Student students[];
+	int studentId;
+	String studentName;
+	String email;
+	long mobileNumber;
+	double gpa;
+	{
+		arraySize++;
+	}
+
+	public Student(int studentId, String studentName, String email, long mobileNumber, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.email = email;
+		this.mobileNumber = mobileNumber;
+		if (gpa < 0)
+			return;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		if (gpa < 0)
+			return;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, double gpa, String email) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.email = email;
+		if (gpa < 0)
+			return;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, long mobileNumber, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.mobileNumber = mobileNumber;
+		if (gpa < 0)
+			return;
+		this.gpa = gpa;
+	}
+
+	@Override
+	public String toString() {
+		if (this.email.equals(null) && this.mobileNumber == 0) {
+			return "\n" + "Student Details:\n" + "Student ID : " + this.studentId + "\n" + "Student Name : "
+					+ this.studentName + "\n" + "Student GPA : " + this.gpa + "\n";
+		} else if (this.email.equals(null)) {
+			return "\n" + "Student Details:\n" + "Student ID : " + this.studentId + "\n" + "Student Name : "
+					+ this.studentName + "\n" + "Student GPA : " + this.gpa + "\n" + "Student Mobile : "
+					+ this.mobileNumber + "\n";
+		} else {
+			return "\n" + "Student Details:\n" + "Student ID : " + this.studentId + "\n" + "Student Name : "
+					+ this.studentName + "\n" + "Student GPA : " + this.gpa + "\n" + "Student Mobile : "
+					+ this.mobileNumber + "\n" + "Student  Email ID : " + this.email + "\n";
+		}
+	}
+
+	public void findTopperByGpa() {
+		Student resultStudent = null;
+		for (Student student : students) {
+			resultStudent = student.gpa > resultStudent.gpa ? student : null;
+		}
+		System.out.println(resultStudent);
+	}
+
+	public void getFailedStudents() {
+		System.out.println("Failed Students ");
+		for (Student student : students) {
+			if (student.gpa < 5)
+				System.out.println(student);
+		}
+	}
+
+	public void printStandings() {
+		int i = 0;
+		Student resultStudent = null;
+		while (i < students.length) {
+			if (students[i].equals(null))
+				continue;
+			resultStudent = students[i].gpa > resultStudent.gpa ? students[i] : null;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+package constructor_chaining;
+
+public class Student {
+	int marks;
+	long mobileNumber;
+	String emailId;
+//	long aadhar;
+
+	public Student() {
+
+	}
+
+	public Student(int marks, String mail) {
+
+	}
+
+	// type
+	// num of
+	// sequence
+	public Student(int marks, long mobile) {
+
+	}
+
+	public static void main(String[] args) {
+		
+		Student s1 = new Student();
+		Student s2=new Student(55,9398538741L);
+	}
+}

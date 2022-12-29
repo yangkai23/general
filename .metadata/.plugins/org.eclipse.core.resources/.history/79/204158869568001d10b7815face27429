@@ -1,0 +1,16 @@
+package com.parkerInc.xmlparsers.sax.parser;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.SAXException;
+
+public class SaxParserr {
+	public static void main(String[] args) throws ParserConfigurationException, SAXException {
+			SAXParserFactory saxParserFactory =SAXParserFactory.newInstance();
+			SAXParser saxParser = saxParserFactory.newSAXParser();
+			SaxHandler handler = new SaxHandler();
+			saxParser.parse(ClassLoader.getSystemResourceAsStream("xml/Drive"), handler);
+	}
+}

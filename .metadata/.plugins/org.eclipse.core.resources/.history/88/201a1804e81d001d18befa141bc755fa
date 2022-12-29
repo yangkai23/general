@@ -1,0 +1,15 @@
+package basic;
+
+import java.util.Arrays;
+
+public class ArrayCheck {
+public static void main(String[] args) {
+	int ar[]=new int [2];
+	int a[]= getArray(ar);
+}
+
+private static int[] getArray(int []ar) {
+	List
+	return Arrays.copyOfRange(getArray(), 0, 0);
+}
+}

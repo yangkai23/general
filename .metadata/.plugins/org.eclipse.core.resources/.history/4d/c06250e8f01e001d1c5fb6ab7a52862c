@@ -1,0 +1,33 @@
+package basic;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+
+public class PrahithXamStrings {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int test = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());
+		String ar[] = new String[n];
+		for (int i = 0; i < ar.length; i++) {
+			ar[i] = br.readLine();
+		}
+
+		while (test != 0) {
+				
+				HashMap<String, Integer> map=new HashMap<>();
+				for(int i=0;i<ar.length;i++) {
+					if(map.containsKey(ar[i])) 
+						map.put(ar[i], map.get(ar[i])+1);
+					else
+						map.put(ar[i], 1);
+				}
+			
+			
+			test--;
+		}
+
+	}
+}

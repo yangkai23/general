@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Order"
+	xmlns:tns="http://www.example.org/Order" elementFormDefault="qualified">
+	<element name="Order" type="tns:Order" />
+	<complexType name="Order">
+		<sequence>
+			<element name="Product" type="tns:Product" minOccurs="1"
+				maxOccurs="unbounded" />
+			<element name="Customer" type="tns:Customer" />
+		</sequence>
+			<attribute name="ID" type="tns:OrderId"></attribute>
+	</complexType>
+	<complexType name="Customer">
+		<sequence>
+			<element name="customerName" type="string" />
+			<element name="customerPhone" type="string" minOccurs="0" />
+		</sequence>
+	</complexType>
+	<complexType name="Product">
+		<sequence>
+			<element name="name" type="tns:name20chars"></element>
+			<element name="description" type="tns:desc100chars"></element>
+			<element name="price" type="int"></element>
+			<element name="category" type="tns:categoryEnum"></element>
+		</sequence>
+	</complexType>
+
+	<simpleType name="OrderId">
+		<restriction base="int">
+			<maxInclusive value="50"></maxInclusive>
+		</restriction>
+	</simpleType>
+	<simpleType name="name20chars">
+		<restriction base="string">
+			<maxLength value="20"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="desc100chars">
+		<restriction base="string">
+			<maxLength value="100"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="categoryEnum">
+		<restriction base="string">
+			<enumeration value="shoes" />
+			<enumeration value="electronics" />
+			<enumeration value="groceries" />
+		</restriction>
+	</simpleType>
+</schema>

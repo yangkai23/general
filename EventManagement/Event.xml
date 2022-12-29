@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Event id="123456"
+	xmlns:tns="http://www.ParkerIncEvents.com/Event"
+	xmlns:tns1="http://www.ParkerIncEvents.com/common"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ParkerIncEvents.com/Event Event.xsd ">
+	<tns:name>SecondDiscussion</tns:name>
+	<tns:description>Knowledge Sharing</tns:description>
+	<tns:ticketPrice>2225</tns:ticketPrice>
+	<tns:startTime>2001-12-31T12:00:00</tns:startTime>
+	<tns:endTime>2001-12-31T12:00:00</tns:endTime>
+	<tns:Organiser id="153421">
+		<tns:name>Anirudh</tns:name>
+		<tns:email>parker.EventOrganising@gmail.com</tns:email>
+		<tns:phone>9398538742</tns:phone>
+	</tns:Organiser>
+	<tns:Venue id="896523">
+		<tns:name>tns:name</tns:name>
+		<tns:street>tns:street</tns:street>
+		<tns:city>tns:city</tns:city>
+		<tns:state>tns:state</tns:state>
+		<tns:country>tns:country</tns:country>
+		<tns:zipcode>tns:zipcode</tns:zipcode>
+	</tns:Venue>
+	<tns:Participant id="321456">
+		<tns:name>Vishnu</tns:name>
+		<tns:email>Vishnu@gmail.com</tns:email>
+		<tns:phone>7896541235</tns:phone>
+	</tns:Participant>
+	<tns:Participant id="745869">
+		<tns:name>Revanth</tns:name>
+		<tns:email>revanth@gmail.com</tns:email>
+		<tns:phone>8745963210</tns:phone>
+	</tns:Participant>
+	<tns:Participant id="023145">
+		<tns:name>Girish</tns:name>
+		<tns:email>girish@gmail.com</tns:email>
+		<tns:phone>7896541235</tns:phone>
+	</tns:Participant>
+</tns:Event>

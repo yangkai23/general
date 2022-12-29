@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Reservation.xml&apos; to &apos;DomXMLParser/src/xml&apos;&#x0D;&#x0A;- Original project: &apos;FlightReservation&apos;&#x0D;&#x0A;- Destination element: &apos;DomXMLParser/src/xml&apos;&#x0D;&#x0A;- Original element: &apos;Reservation.xml&apos;" description="Copy file" destination="=DomXMLParser/src&lt;xml" element1="Reservation.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1668425660091" units="0" version="1.0"/>
+</session>

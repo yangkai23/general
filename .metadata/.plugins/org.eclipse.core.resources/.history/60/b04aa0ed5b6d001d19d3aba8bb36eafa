@@ -1,0 +1,20 @@
+package one;
+
+public class First {
+	int a=4;//global
+int b=6;
+int c=a+b;
+	public First(int b) {
+//		System.out.println(a);//local
+		
+	}
+
+		
+	
+	public static void main(String[] args) {
+		
+		First f1 = new First(2);
+		System.out.println(f1);
+	}
+
+}

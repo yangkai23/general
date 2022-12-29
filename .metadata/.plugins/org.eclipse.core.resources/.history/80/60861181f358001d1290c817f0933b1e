@@ -1,0 +1,10 @@
+package constructor_chaining;
+
+public class B extends A {
+	public B(int a) {
+		super(a);
+		System.out.println(a+" in class B");
+//		this.b=a;
+	}
+
+}

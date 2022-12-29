@@ -1,0 +1,18 @@
+package one;
+
+public class First {
+	int a;
+
+	public First(int a) {
+		System.out.println(a);
+		
+		this.a=a;
+		System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+		First first = new First(2);
+		System.out.println(first.a);
+	}
+
+}

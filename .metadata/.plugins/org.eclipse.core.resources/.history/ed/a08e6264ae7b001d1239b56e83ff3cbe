@@ -1,0 +1,14 @@
+package miscallaneous;
+
+import java.util.Scanner;
+
+public interface Permutations {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		printPermutations(sc.next(), 0);
+	}
+
+	public static void printPermutations(String next, int pos) {
+
+	}
+}

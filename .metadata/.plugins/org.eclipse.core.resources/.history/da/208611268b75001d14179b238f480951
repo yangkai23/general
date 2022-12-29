@@ -1,0 +1,50 @@
+package constructor_chaining;
+
+import java.util.Scanner;
+
+public class Student {
+	int marks;
+	long mobileNumber;
+	String emailId;
+//	long aadhar;
+
+	public Student() {
+
+	}
+
+	public Student(int marks, String mail) {
+
+	}
+
+	// type
+	// num of
+	// sequence
+	public Student(int marks, long mobile) {
+		this.marks = marks;
+		this.mobileNumber = mobile;
+	}
+
+	@Override
+	public String toString() {
+		String res= "Student [marks=" + marks + ", mobileNumber=" + mobileNumber ;
+		if(this.emailId!=null)
+			return res+" emailId "+this.emailId+" ]";
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Student s1 = new Student() {
+			@Override
+			public String toString() {
+				
+				return super.toString();
+			}
+		};
+		Object a;
+		System.out.println(s1);
+		Student s2 = new Student(scanner.nextInt(), scanner.nextLong());
+		System.out.println(s2);
+		Student s3 = new Student(scanner.nextInt(), "example@gmail.com");
+		scanner.close();
+	}
+}

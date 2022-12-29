@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ParkerAirLines.com/Resercation"
+	xmlns:pal="http://www.ParkerAirLines.com/Resercation"
+	elementFormDefault="qualified">
+	<include schemaLocation="common.xsd"></include>
+	<complexType name="flight">
+		<sequence>
+			<element name="flightNumber" type="pal:stringMax20" />
+			<element name="operatingAirlines" type="pal:AirLine" />
+			<element name="arrivalCity" type="pal:stringMax20" />
+			<element name="dateofDeparture" type="date" />
+			<element name="estimatedDepartureTime" type="time" />
+		</sequence>
+	</complexType>
+
+	<simpleType name="AirLine">
+		<restriction base="string">
+			<enumeration value="AirIndia" />
+			<enumeration value="Indigo" />
+			<enumeration value="Kingfisher" />
+			<enumeration value="Emirates" />
+		</restriction>
+	</simpleType>
+</schema>

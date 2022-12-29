@@ -1,0 +1,31 @@
+package employee_details_proj.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
+
+import employee_details_proj.dto.Employee;
+import employee_details_proj.exceptions.InvalidDesignationException;
+
+public class EmployeeService {
+	private TreeSet<Employee> trainee=new TreeSet<>();
+	private TreeSet<Employee> lead=new TreeSet<>();
+	private TreeSet<Employee> manager=new TreeSet<>();
+	
+	public List<TreeSet<Employee>> groupEmployees(Employee employee){
+		ArrayList<TreeSet<Employee>> list=new ArrayList<>();
+		if(employee.getDesignation().equalsIgnoreCase("trainee")) 
+			trainee.add(employee);
+		else if(employee.getDesignation().equalsIgnoreCase("lead"))
+			lead.add(employee);
+		else if(employee.getDesignation().equalsIgnoreCase("manager"))
+			manager.add(employee);
+		else
+			throw new InvalidDesignationException();
+		System.out.println(trainee);
+		list.add(manager);
+		list.add(lead);
+		list.add(trainee);
+		return list;
+	}
+}

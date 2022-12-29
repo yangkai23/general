@@ -1,0 +1,11 @@
+package one;
+
+public class TernaryOperator {
+	// Blocks
+	{
+
+	}
+
+	public static void main(String[] args) {
+	}
+}

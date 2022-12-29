@@ -1,0 +1,12 @@
+package constructor_chaining;
+
+public class ConstructorTest {
+
+	public ConstructorTest() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

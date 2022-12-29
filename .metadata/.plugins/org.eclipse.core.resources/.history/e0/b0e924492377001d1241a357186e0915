@@ -1,0 +1,14 @@
+package one;
+
+public class StaticBlocks {
+	static {
+		System.out.println("this is static block");
+		{
+			System.out.println("inner block");
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

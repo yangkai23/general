@@ -1,0 +1,49 @@
+package grind.medium;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class LongestSubstring {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		String len = getLongSubstrLength(s);
+		System.out.println(len);
+		sc.close();
+	}
+
+	private static String getLongSubstrLength(String s) {
+		String max="";
+		if (s.length() == 1)
+			return s;
+		if (s.isEmpty())
+			return null;
+		if (s.length() == 2) {
+			if(s.charAt(0)!=s.charAt(1))
+			return String.valueOf(s.charAt(0));
+		}
+			
+		ArrayList<Character> list = new ArrayList<>();
+		int i = 0,j=i+1;
+		while (i < s.length() && j<s.length()) {
+			if(list.isEmpty())
+				list.add(s.charAt(i));
+			System.out.println(list);
+			list.add(s.charAt(j));
+			if (list.size() > 1) {
+				if(list.get(j-i)==list.get(0)) {
+					if(list.size()>max.length())
+						max=list.stream().map(Object::toString).collect(Collectors.joining());
+				}
+			}
+			j++;
+			if(j==s.length()) {
+				list.clear();
+				i++;
+				j=i+1;
+			}
+		}
+		return max;
+	}
+}

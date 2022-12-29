@@ -1,0 +1,9 @@
+package one;
+
+public class StaticVsNonStatic {
+	
+	int x;
+	public static void main(String[] args) {
+
+	}
+}

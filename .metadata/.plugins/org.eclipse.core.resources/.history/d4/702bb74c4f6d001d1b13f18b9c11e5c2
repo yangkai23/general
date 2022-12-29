@@ -1,0 +1,12 @@
+package linkedlist;
+
+public class SinglyLinkedListMain {
+	public static void main(String[] args) {
+		SinglyLinkedList list = new SinglyLinkedList();
+		list.add(0);
+		list.add(1);
+		list.printList();
+//		list.removeFirst();
+//		list.printList();
+	}
+}

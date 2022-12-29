@@ -1,0 +1,46 @@
+package linkedlist;
+
+public class SinglyLinkedList {
+	private Node head;
+	private int size;
+
+	public SinglyLinkedList() {
+		this.head = null;
+		this.size = 0;
+	}
+
+	private class Node {
+		public int data;
+		public Node next;
+
+		public Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
+	}
+
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	public void addFirst(int data) {
+		Node node = new Node(data);
+		node.next = this.head;
+		head = node;
+		size++;
+	}
+
+	public void printList() {
+		Node temp = this.head;
+		System.out.print("Head -> ");
+		while (temp != null) {
+			System.out.print(temp.data + " -> ");
+			temp = temp.next;
+		}
+		System.out.println("null");
+	}
+
+	public int size() {
+		return size;
+	}
+}

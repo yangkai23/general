@@ -1,0 +1,5 @@
+package employee_details_proj.exceptions;
+
+public class DateOfJoiningExceedException extends RuntimeException {
+
+}

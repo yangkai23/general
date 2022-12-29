@@ -1,0 +1,11 @@
+package one;
+
+public class Student {
+	public Student() {
+		System.out.println("this is custom constructor with zero parameters");
+	}
+
+	public static void main(String[] args) {
+//		Student student = new Student();
+	}
+}

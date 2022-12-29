@@ -1,0 +1,11 @@
+package one;
+
+public class Rev0112 {
+	int x;
+
+	public static void main(String[] args) {
+			Rev0112 rev0112=new Rev0112();
+			System.out.println(rev0112.x);
+	}
+
+}

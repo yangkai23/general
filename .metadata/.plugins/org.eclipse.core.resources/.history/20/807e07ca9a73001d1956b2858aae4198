@@ -1,0 +1,12 @@
+package one;
+
+public class Test {
+	
+	public static void demo(int x,int y) {
+		System.out.println(x/y);
+	}
+	
+	public static void main(String[] args) {
+			
+	}
+}

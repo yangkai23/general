@@ -1,0 +1,11 @@
+package com.parkerInc.xmlparsers.dom.parser;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+
+public class DomParser {
+
+	public static void main(String[] args) {
+			DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+	}
+
+}

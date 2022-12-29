@@ -1,0 +1,112 @@
+package employee_details_proj.dto;
+
+import employee_details_proj.exceptions.DateOfJoiningExceedException;
+import employee_details_proj.exceptions.DateOfJoiningShortException;
+import employee_details_proj.exceptions.ExperienceNotMatchException;
+import employee_details_proj.service.EmployeeService;
+
+public class Employee implements Comparable<Employee> {
+	private String firstName;
+	private String lastName;
+	private String dob;
+	private String doj;
+	private int experience;
+	private String designation;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getDoj() {
+		return doj;
+	}
+
+	public void setDoj(String doj) {
+		String d[] = doj.split("-");
+		int year=Integer.parseInt(d[2]);
+		if(year>58)
+			throw new DateOfJoiningExceedException();
+		else if(year<18)
+			throw new DateOfJoiningShortException();
+		this.doj = doj;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		if(experience==0) {
+			System.out.println("Requested to Enter Experience");
+			return;
+		}
+		if(!new EmployeeService().checkExperience(designation, experience))
+			throw new ExperienceNotMatchException();
+		this.designation = designation;
+	}
+
+	@Override
+	public int compareTo(Employee e) {
+		String dob[] = e.getDob().split("-");
+		String edob[] = this.getDob().split("-");
+		int day = Integer.parseInt(dob[0]);
+		int eday = Integer.parseInt(edob[0]);
+		int mon = Integer.parseInt(dob[1]);
+		int emon = Integer.parseInt(edob[1]);
+		int year = Integer.parseInt(dob[2]);
+		int eyear = Integer.parseInt(edob[2]);
+		if (year < eyear)
+			return -1;
+		else if (year >eyear)
+			return 1;
+		else {
+			if (mon < emon)
+				return -1;
+			else if (mon>emon)
+				return 1;
+			else {
+				if (day < eday)
+					return 1;
+				else if (eday < day)
+					return -1;
+				else
+					return 0;
+			}
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", dob=" + dob + ", doj=" + doj
+				+ ", experience=" + experience + ", designation=" + designation + "]";
+	}
+
+}

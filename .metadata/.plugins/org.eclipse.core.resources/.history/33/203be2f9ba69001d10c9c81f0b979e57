@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE course SYSTEM "course.dtd" >
+<course>
+	This is XSLT Demo
+	<name></name>
+	<price></price>
+	<rating></rating>
+</course>

@@ -1,0 +1,16 @@
+package one;
+
+import java.util.Scanner;
+
+public class Second {
+	public static void sum(int a ,String b) {
+		System.out.println(a+b);
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		String b=sc.next();
+		sum(a, b);
+		sc.close();
+	}
+}

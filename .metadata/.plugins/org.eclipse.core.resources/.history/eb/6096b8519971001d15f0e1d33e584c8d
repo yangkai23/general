@@ -1,0 +1,15 @@
+package one;
+
+public class Student {
+	
+	int id=2;//initialization @ declaration
+
+	public static void main(String[] args) {
+			Student s1=new Student();
+			Student s2=new Student();
+			s1.id=4;
+			s2.id=9;
+			System.out.println(s1.id);
+			System.out.println(s2.id);
+	}
+}

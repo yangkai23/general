@@ -1,0 +1,10 @@
+package com.parkerInc.xmlparsers.dom.parser;
+
+public class DomParser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

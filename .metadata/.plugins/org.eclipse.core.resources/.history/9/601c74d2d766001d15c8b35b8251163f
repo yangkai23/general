@@ -1,0 +1,23 @@
+package sorting;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class RadixSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int ar[] = new int[sc.nextInt()];
+		for (int i = 0; i < ar.length; i++) {
+			ar[i] = sc.nextInt();
+		}
+		radixSort(ar,10,4);
+		System.out.println(Arrays.toString(ar));
+		sc.close();
+	}
+
+	private static void radixSort(int[] ar, int radix, int width) {
+		for(int i=0;i<)
+		
+	}
+
+}

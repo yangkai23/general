@@ -1,0 +1,22 @@
+package miscallaneous;
+
+import java.util.Scanner;
+
+public interface Permutations {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		printPermutations(sc.next(), 0);
+		sc.close();
+	}
+
+	public static void printPermutations(String word, int pos) {
+		if (pos >= word.length())
+			return;
+		for (int i = pos; i < word.length(); i++) {
+//			System.out.println("x " + word.charAt(i));
+			System.out.println(
+					word.substring(0, pos) + word.charAt(i) + word.charAt(pos) + word.substring(i, word.length() - 1));
+		}
+		printPermutations(word, pos = pos + 1);
+	}
+}

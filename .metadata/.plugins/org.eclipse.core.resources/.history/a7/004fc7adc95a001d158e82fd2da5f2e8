@@ -1,0 +1,14 @@
+package Thread;
+
+public class Thread1 extends Thread {
+	@Override
+	public void run() {
+		System.out.println("Hello World " + Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getName());
+		 new Thread1().start();;
+		t1.start();
+	}
+}

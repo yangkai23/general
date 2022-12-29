@@ -1,0 +1,33 @@
+package grind.medium;
+
+import java.util.Scanner;
+
+public class ReverseInteger {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int res = getReversedNumber(sc.nextInt());
+		System.out.println(res);
+		sc.close();
+	}
+
+	private static int getReversedNumber(int x) {
+		StringBuilder builder = new StringBuilder();
+		boolean check = false;
+		if (x < 0) {
+			builder.append(x * -1);
+			check = true;
+		} else
+			builder.append(x);
+		builder.reverse();
+		int rev = Integer.parseInt(builder.toString());
+		if (rev > Integer.MAX_VALUE)
+			return 0;
+		if (check) {
+			if (rev * -1 < Integer.MIN_VALUE)
+				return 0;
+			else
+				return rev * -1;
+		} else
+			return rev;
+	}
+}

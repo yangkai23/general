@@ -1,0 +1,13 @@
+package one;
+
+public class Student {
+	
+	int x=2;//initialization @ declaration
+
+	public static void main(String[] args) {
+			Student s1=new Student();
+			Student s2=new Student();
+			System.out.println(s1.x);
+			System.out.println(s2.x);
+	}
+}

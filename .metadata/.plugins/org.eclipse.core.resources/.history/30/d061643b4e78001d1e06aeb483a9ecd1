@@ -1,0 +1,49 @@
+package conceptual;
+
+public class Student {
+	static int arraySize;
+	static Student students[];
+	int studentId;
+	String studentName;
+	String email;
+	long mobileNumber;
+	double gpa;
+	{
+		arraySize++;
+	}
+
+	public Student(int studentId, String studentName, String email, long mobileNumber, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.email = email;
+		this.mobileNumber = mobileNumber;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, double gpa, String email) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.email = email;
+		this.gpa = gpa;
+	}
+
+	public Student(int studentId, String studentName, long mobileNumber, double gpa) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.mobileNumber = mobileNumber;
+		this.gpa = gpa;
+	}
+
+	public void findTopperByGpa() {
+		double maxGpa = 0;
+		for (Student student : students) {
+			maxGpa = (student.gpa > maxGpa) ? student.gpa : 0;
+		}
+	}
+}

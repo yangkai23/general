@@ -1,0 +1,37 @@
+package sorting;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ShellSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int arr[] = new int[sc.nextInt()];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(getSortedArray(arr)));
+		sc.close();
+	}
+
+	public static int[] getSortedArray(int[] arr) {
+		int gap = arr.length / 2;
+		while (gap > 0) {
+			int i = gap;
+			while (i < arr.length) {
+				int newElement = arr[i];
+				int j = i;
+				while (j >= gap && arr[j] > newElement) {
+					arr[j] = arr[j - gap];
+					j = j - gap;
+				}
+				arr[j] = newElement;
+				i++;
+			}
+			System.out.println(Arrays.toString(arr));
+			gap = gap / 2;
+		}
+		return arr;
+	}
+
+}

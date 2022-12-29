@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Order xmlns:tns="http://www.example.org/Order"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/Order Order.xsd ">
+	<tns:Product>
+		<tns:name>Reebok primes 2k51</tns:name>
+		<tns:description>vhdbvdcnd fhv hjf hfb hf</tns:description>
+		<tns:price>2000</tns:price>
+		<tns:category>shoes</tns:category>
+	</tns:Product>
+	<tns:Customer>
+		<tns:customerName>Anirudh</tns:customerName>
+		<tns:customerPhone>9398538741</tns:customerPhone>
+	</tns:Customer>
+</tns:Order>

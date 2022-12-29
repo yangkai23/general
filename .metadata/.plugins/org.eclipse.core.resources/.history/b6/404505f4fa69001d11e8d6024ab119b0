@@ -1,0 +1,30 @@
+package sorting;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class InsertionSortRecursive {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int ar[] = new int[sc.nextInt()];
+		for (int i = 0; i < ar.length; i++) {
+			ar[i] = sc.nextInt();
+		}
+		sortedArray(ar, 1);
+		System.out.println(Arrays.toString(ar));
+		sc.close();
+	}
+
+	private static int sortedArray(int[] ar, int i) {
+		if (i == ar.length)
+			return 1;
+		int j = i;
+		int currentElement = ar[i];
+		while (j >= 0 && ar[j] < ar[j - 1]) {
+			ar[j - 1] = ar[j];
+			j--;
+		}
+		ar[j + 1] = currentElement;
+		return sortedArray(ar, i + 1);
+	}
+}

@@ -1,0 +1,17 @@
+package constructor_chaining;
+
+public class D {
+	D() {
+		this(5);
+	}
+
+	D(int a) {
+	}
+	D(String a , double b){
+		this();
+	}
+	D(char c){
+		this("ani",2.5);
+	}
+	
+}

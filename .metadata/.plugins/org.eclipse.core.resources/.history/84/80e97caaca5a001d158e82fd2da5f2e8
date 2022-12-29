@@ -1,0 +1,19 @@
+package Thread;
+
+public class Thread1 extends Thread {
+	private int numberToPrint;
+	public Thread1(int NumberToPrint) {
+		this.numberToPrint=NumberToPrint;
+	}
+	@Override
+	public void run() {
+		System.out.println("Number is  "+this.numberToPrint+"  printed by "+Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		for(int i=1;i<=100;i++) {
+			Thread t1=new Thread();
+			t1.start();
+		}
+	}
+}
